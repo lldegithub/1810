@@ -1,0 +1,24 @@
+#loginbar{
+  height:28px;
+  background:#F2F2F2;
+  .loginbar{
+    height:28px;
+    p.fl{
+      font-size:12px;
+      height:28px;
+      width:119px;
+      line-height:28px;
+      span.city{
+        color:#F52648;
+        font-weight:bold;
+        i{
+          display:inline-block;
+          width:8px;
+          height:4px;
+          margin-bottom:2px;
+          background:url(../img/icons.png) no-repeat -96px 0px;
+        }
+      }
+    }
+  }
+}
