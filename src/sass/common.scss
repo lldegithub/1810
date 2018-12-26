@@ -371,7 +371,8 @@
         top:40px;
         z-index:3;
         width:220px;
-        height:360px;
+        height:0;
+        overflow:hidden;
         font-size:12px;
         color:#000;
         background:#F7F7F7;
@@ -472,41 +473,54 @@
             background:#fff;
           }
         }
-        .yinc{
-          height:0;
-          overflow:hidden;
-        }
-        &:hover .yinc{
-          height:110px;
-          background:#fff;
-          overflow:visible;
-          transition:all .2s;
+        //.yinc{
+        //  height:0;
+        //  overflow:hidden;
+        //}
+        //&:hover .yinc{
+        //  height:110px;
+        //  background:#fff;
+        //  overflow:visible;
+        //  transition:all .2s;
+        //}
+        //.more{
+        //  height:0;
+        //  overflow:hidden;
+        //  a{
+        //    color:#000;
+        //  }
+        //}
+        //.jiantou{
+        //  height:30px;
+        //  text-align:center;
+        //  i{
+        //    display:inline-block;
+        //    width:23px;
+        //    height:13px;
+        //    background:url(../img/nav_jt.png) no-repeat ;
+        //  }
+        //}
+        .jiantou{
+          display:none;
         }
         .more{
-            height:0;
-            overflow:hidden;
+          height:30px;
+          //overflow:visible;
           a{
             color:#000;
           }
         }
-        .jiantou{
-          height:30px;
-          text-align:center;
-          i{
-            display:inline-block;
-            width:23px;
-            height:13px;
-            background:url(../img/nav_jt.png) no-repeat ;
-          }
-        }
-        &:hover .jiantou{
-          display:none;
-        }
-        &:hover .more{
-          height:30px;
-          overflow:visible;
-        }
       }
+      &:hover .nav1{
+        height:580px;
+        overflow:visible;
+        transition:all .3s;
+        box-shadow: 0 0 7px #ccc;
+      }
+      //&:hover i.classify_i{
+      //  transform:rotate(180deg);
+      //  transition:all .3s;
+      //}
     }
     a.nav_a{
       float:left;
@@ -534,48 +548,6 @@
         }
         &:nth-child(3){
           background-position:-142px -13px;
-        }
-      }
-    }
-  }
-}
-
-/*banner*/
-#banner{
-  position:relative;
-  height:360px;
-  .banner{
-    position:absolute;
-    left:0;
-    top:0;
-    width:100%;
-    height:360px;
-    img{
-      position:absolute;
-      left:0;
-      top:0;
-      width:100%;
-      height:100%;
-      cursor:pointer;
-      opacity:0;
-      &.cur{
-        opacity:1;
-      }
-    }
-    ul{
-      overflow:hidden;
-      position:absolute;
-      left:50%;
-      margin-left:367px;
-      bottom:3px;
-      li{
-        float:left;
-        width:14px;
-        height:14px;
-        margin-right:10px;
-        background:#000;
-        &.cur{
-          background:#f00;
         }
       }
     }
@@ -641,151 +613,6 @@
     &.sp2{
       background-position: -67px -381px;
     }
-  }
-}
-
-/*main*/
-#main{
-  background:#F5F5F5;
-  .main{
-    padding-bottom:40px;
-    .pinpai{
-      height:63px;
-      border-bottom:2px solid #D2A264;
-      padding-top:10px;
-      i{
-        display:inline-block;
-        width:118px;
-        height:40px;
-        vertical-align:center;
-        background:url(../img/tubiaos.png) no-repeat 0 -64px;
-      }
-      span{
-        display:inline-block;
-        font-size:18px;
-        color:#999;
-        margin-left:10px;
-        b{
-          font-weight:300;
-          color:#f00;
-        }
-      }
-      a{
-        color:#999;
-        font-size:12px;
-        float:right;
-        margin-top:20px;
-      }
-    }
-    .content{
-      padding:10px 1px 0 1px;
-      margin-bottom:30px;
-      ul{
-        overflow:hidden;
-        li{
-          float:left;
-          width:490px;
-          margin:0 4px 20px;
-          img{
-            width:100%;
-            height:216px;
-            border-radius:3px;
-            &:hover{
-              box-shadow:0 0 10px #999;
-              transition:all .5s;
-            }
-          }
-          p{
-            font-size:14px;
-            line-height:14px;
-            padding:12px 8px 2px;
-            color:#62615F;
-            span{
-              color:#f00;
-            }
-          }
-        }
-      }
-    }
-    .early{
-      height:52px;
-      border-bottom:2px solid #AF45A7;
-      margin-bottom:15px;
-      i{
-        display:inline-block;
-        width:118px;
-        height:40px;
-        vertical-align:center;
-        background:url(../img/tubiaos.png) no-repeat 0 -264px;
-      }
-    }
-    .list{
-      ul{
-        overflow:hidden;
-        li{
-          float:left;
-          padding:0 14px;
-          border:1px solid #ccc;
-          margin:0 10px 28px;
-          cursor:pointer;
-          img{
-            width:200px;
-            height:253px;
-          }
-          p.title{
-            width:200px;
-            font-size:12px;
-            margin-bottom:5px;
-            span{
-              color:#f00;
-              font-weight:bold;
-            }
-          }
-          p.price{
-            width:200px;
-            height:40px;
-            padding-top:5px;
-            span{
-              color:#65605C;
-              font-weight:bold;
-              font-size:14px;
-            }
-            del{
-              font-size:12px;
-              color:#8B8B8B;
-            }
-            button{
-              float:right;
-              height:28px;
-              width:96px;
-              border-radius:3px;
-              background:#FF0039;
-              color:#fff;
-              font-weight:bold;
-              font-size:12px;
-              line-height:28px;
-              text-align:center;
-              display:none;
-            }
-          }
-          &:hover img{
-            opacity:.3;
-          }
-          &:hover p.price button{
-            display:block;
-          }
-        }
-      }
-    }
-  }
-}
-
-/*haibao*/
-#haibao{
-  height:304px;
-  background:#F62648;
-  .haibao{
-    height:304px;
   }
 }
 

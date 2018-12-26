@@ -19,11 +19,18 @@ a {text-decoration:none; }
     background:#fff;
 }*/
 /*清除浮动（不管）*/
-.clearfix:before,.clearfix:after {  /*清楚浮动*/
-    content:"";
-    display:table;
+/*.clearfix:before,.clearfix:after {  !*清楚浮动*!*/
+    /*content:"";*/
+    /*display:table;*/
+/*}*/
+.clearfix:after{
+    content:".";
+    clear:both;
+    display:block;
+    height:0;
+    overflow:hidden;
+    visibility:hidden;
 }
-.clearfix:after{clear:both;}
 .clearfix{
     *zoom:1;/*IE/7/6*/
 }

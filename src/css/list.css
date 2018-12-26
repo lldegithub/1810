@@ -1,0 +1,580 @@
+#main {
+  background: #F5F5F5;
+}
+
+#main .main {
+  font-size: 12px;
+}
+
+#main .main .hufutaozhuang p {
+  height: 37px;
+  line-height: 37px;
+  color: #333333;
+}
+
+#main .main .hufutaozhuang p a {
+  color: #FF0000;
+}
+
+#main .main .hufutaozhuang p span {
+  position: relative;
+  margin: 0 5px;
+  display: inline;
+  height: 24px;
+  padding: 2px 20px 2px 0px;
+  line-height: 24px;
+  white-space: nowrap;
+  cursor: pointer;
+  border: 1px dashed #F10180;
+}
+
+#main .main .hufutaozhuang p span em {
+  height: 24px;
+  padding: 0px 0px 0px 10px;
+  line-height: 24px;
+  max-width: 240px;
+  /* display: inline-block; */
+  white-space: nowrap;
+  overflow: hidden;
+  color: #f52648;
+}
+
+#main .main .hufutaozhuang p span b {
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  width: 8px;
+  height: 12px;
+  margin: 0px 0px 0px 5px;
+  display: inline-block;
+  overflow: hidden;
+  color: #f52648;
+  line-height: 12px;
+  cursor: pointer;
+}
+
+#main .main .filter {
+  margin-bottom: 30px;
+}
+
+#main .main .filter .filter_ul {
+  border: 1px solid #ccc;
+  border-bottom: 0;
+}
+
+#main .main .filter .filter_ul .filter_t {
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 1px solid #eceae6;
+}
+
+#main .main .filter .filter_ul .filter_t h3 {
+  float: left;
+  height: 100%;
+  width: 86px;
+  text-align: center;
+  line-height: 90px;
+}
+
+#main .main .filter .filter_ul .filter_t .t_r {
+  float: left;
+  width: 912px;
+  background: #fff;
+  padding: 21px 0 21px 9px;
+}
+
+#main .main .filter .filter_ul .filter_t .t_r ul {
+  float: left;
+  width: 694px;
+  height: 50px;
+  overflow: hidden;
+}
+
+#main .main .filter .filter_ul .filter_t .t_r ul li {
+  float: left;
+  position: relative;
+  cursor: pointer;
+  width: 100px;
+  height: 50px;
+  border: 1px solid #ccc;
+  margin: 0px -1px -1px 0px;
+}
+
+#main .main .filter .filter_ul .filter_t .t_r ul li img {
+  width: 98px;
+  height: 48px;
+}
+
+#main .main .filter .filter_ul .filter_t .t_r ul li span {
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  z-index: 3;
+  display: none;
+  width: 100px;
+  height: 50px;
+  border: 1px solid #f00;
+}
+
+#main .main .filter .filter_ul .filter_t .t_r ul li i {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: none;
+  width: 15px;
+  height: 13px;
+  background: url(../img/icons.png) no-repeat -128px -38px;
+}
+
+#main .main .filter .filter_ul .filter_t .t_r ul li:hover span {
+  display: block;
+}
+
+#main .main .filter .filter_ul .filter_t .t_r .more {
+  margin-left: 84px;
+  line-height: 50px;
+  cursor: pointer;
+}
+
+#main .main .filter .filter_ul .filter_t .t_r .more strong {
+  font-weight: normal;
+}
+
+#main .main .filter .filter_ul .filter_t .t_r .more i {
+  display: inline-block;
+  width: 8px;
+  height: 4px;
+  margin-bottom: 2px;
+  background: url(../img/icons.png) no-repeat -113px 0;
+}
+
+#main .main .filter .filter_ul .filter_t .t_r .duoxuan {
+  width: 52px;
+  height: 22px;
+  background: url(../img/icons.png) no-repeat -150px -54px;
+  margin-right: 15px;
+  margin-top: 14px;
+}
+
+#main .main .filter .filter_ul .filter_c {
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 1px solid #ccc;
+}
+
+#main .main .filter .filter_ul .filter_c h3 {
+  float: left;
+  width: 85px;
+  height: 55px;
+  line-height: 50px;
+  text-align: center;
+}
+
+#main .main .filter .filter_ul .filter_c .c_r {
+  float: left;
+  width: 912px;
+  background: #fff;
+  padding-left: 15px;
+}
+
+#main .main .filter .filter_ul .filter_c .c_r ul {
+  overflow: hidden;
+}
+
+#main .main .filter .filter_ul .filter_c .c_r ul li {
+  float: left;
+  line-height: 55px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+#main .main .filter .filter_ul .filter_c .c_r ul li span {
+  color: #ccc;
+}
+
+#main .main .filter .filter_ul .filter_b {
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 1px solid #ccc;
+}
+
+#main .main .filter .filter_ul .filter_b h3 {
+  float: left;
+  width: 85px;
+  height: 55px;
+  line-height: 50px;
+  text-align: center;
+}
+
+#main .main .filter .filter_ul .filter_b .b_r {
+  float: left;
+  width: 912px;
+  background: #fff;
+  padding-left: 15px;
+}
+
+#main .main .filter .filter_ul .filter_b .b_r ul {
+  overflow: hidden;
+}
+
+#main .main .filter .filter_ul .filter_b .b_r ul li {
+  float: left;
+  line-height: 55px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+#main .main .filter .filter_ul .filter_b .b_r ul li span {
+  color: #ccc;
+}
+
+#main .main .paixu {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+#main .main .paixu .paixu_l {
+  float: left;
+  overflow: hidden;
+}
+
+#main .main .paixu .paixu_l li {
+  float: left;
+  width: 70px;
+  height: 41px;
+  text-align: center;
+  line-height: 38px;
+}
+
+#main .main .paixu .paixu_l li i {
+  display: inline-block;
+  width: 8px;
+  height: 4px;
+  margin-left: 10px;
+  vertical-align: middle;
+  background: url(../img/icons.png) no-repeat -113px 0;
+}
+
+#main .main .paixu .paixu_l li i.active {
+  background-position: -105px 0;
+}
+
+#main .main .paixu .paixu_l li.cur {
+  background: #f00;
+  color: #fff;
+}
+
+#main .main .paixu .onsell {
+  float: left;
+  line-height: 38px;
+  margin-left: 20px;
+}
+
+#main .main .paixu .paixu_r {
+  overflow: hidden;
+}
+
+#main .main .paixu .paixu_r li {
+  float: left;
+  line-height: 38px;
+  margin-right: 20px;
+  color: #ccc;
+}
+
+#main .main .paixu .paixu_r li .itemNum {
+  color: #f00;
+}
+
+#main .main .paixu .paixu_r li .pageCur {
+  color: #f00;
+}
+
+#main .main .paixu .paixu_r li .leftBtn {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url(../img/icons.png) no-repeat -143px -38px;
+  margin: 11px 0 0 10px;
+  cursor: pointer;
+}
+
+#main .main .paixu .paixu_r li .rightBtn {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url(../img/icons.png) no-repeat -112px -38px;
+  margin: 11px 0 0 10px;
+  cursor: pointer;
+}
+
+#main .main .list ul {
+  overflow: hidden;
+  position: relative;
+}
+
+#main .main .list ul li {
+  float: left;
+  margin: 8px 5px 0 0;
+  position: relative;
+  background: #fff;
+  border-radius: 3px;
+  border: 1px solid #fff;
+  transition: border .2s;
+  cursor: pointer;
+}
+
+#main .main .list ul li:hover {
+  border: 1px solid #f00;
+}
+
+#main .main .list ul li img {
+  width: 214px;
+  height: 270px;
+  display: block;
+  margin: 15px;
+  margin-bottom: 10px;
+}
+
+#main .main .list ul li p {
+  line-height: 18px;
+  width: 200px;
+  margin-left: 22px;
+}
+
+#main .main .list ul li button {
+  width: 96px;
+  height: 28px;
+  background: #f00;
+  color: #fff;
+  margin: 10px 0 24px 22px;
+  border-radius: 5px;
+}
+
+#main .main .list ul li .tips {
+  position: absolute;
+  left: 0;
+  bottom: 128px;
+  width: 242px;
+  background-color: #fff;
+  opacity: 0;
+  padding: 10px;
+  transition: opacity .2s;
+}
+
+#main .main .list ul li .tips span {
+  display: inline-block;
+  padding: 2px 10px;
+  margin: 3px 3px;
+  background-color: #fff;
+  color: #666;
+  border-radius: 15px;
+  border: #999 solid 1px;
+}
+
+#main .main .list ul li:hover .tips {
+  opacity: .8;
+}
+
+#main .main .list ul li:nth-child(4n) {
+  margin-right: 0;
+}
+
+#main .main .list ul li .last {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 244px;
+  height: 412px;
+  background: url(../img/item_list.png) no-repeat 0 0;
+}
+
+#main .main .page {
+  height: 100px;
+  padding-top: 40px;
+}
+
+#main .main .page ul {
+  float: right;
+  overflow: hidden;
+}
+
+#main .main .page ul li {
+  float: left;
+  width: 35px;
+  height: 32px;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 32px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+#main .main .page ul li.cur {
+  background: #f00;
+}
+
+#main .main .page ul li.firstLi {
+  background: #ccc;
+}
+
+#main .main .search {
+  height: 112px;
+  border: solid 1px #eee;
+  padding: 30px 0 0 280px;
+  background-color: #fff;
+  margin-bottom: 30px;
+}
+
+#main .main .search h3 {
+  float: left;
+  width: 82px;
+  height: 80px;
+  font-weight: bold;
+  line-height: 40px;
+}
+
+#main .main .search .sousuo {
+  float: left;
+  height: 82px;
+}
+
+#main .main .search .sousuo .sousuo_t {
+  width: 400px;
+  height: 40px;
+  background: url(../img/icons.png) no-repeat 0 -443px;
+  padding: 13px 0 0 13px;
+}
+
+#main .main .search .sousuo .sousuo_t input {
+  width: 310px;
+}
+
+#main .main .search .sousuo .sousuo_t span {
+  display: inline-block;
+  margin-left: 30px;
+  color: #fff;
+}
+
+#main .main .lunbo {
+  border-top: 1px solid #f00;
+}
+
+#main .main .lunbo .lunbo_t {
+  overflow: hidden;
+  height: 48px;
+}
+
+#main .main .lunbo .lunbo_t h3 {
+  float: left;
+  line-height: 48px;
+  font-weight: bold;
+}
+
+#main .main .lunbo .lunbo_t .t_r {
+  float: right;
+  color: #999;
+  line-height: 48px;
+}
+
+#main .main .lunbo .lunbo_t .t_r span {
+  vertical-align: middle;
+}
+
+#main .main .lunbo .lunbo_t .t_r .shangBtn {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin: 0 5px;
+  background: url(../img/icons.png) no-repeat -143px -38px;
+  cursor: pointer;
+}
+
+#main .main .lunbo .lunbo_t .t_r .xiaBtn {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url(../img/icons.png) no-repeat -112px -38px;
+  cursor: pointer;
+}
+
+#main .main .lunbo .lunbo_b {
+  position: relative;
+  overflow: hidden;
+  width: 1000px;
+  height: 410px;
+  padding-bottom: 20px;
+}
+
+#main .main .lunbo .lunbo_b ul {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 390px;
+  background: #fff;
+}
+
+#main .main .lunbo .lunbo_b ul li {
+  float: left;
+  height: 390px;
+  width: 240px;
+  margin: 0 5px;
+  border: 1px solid #fff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#main .main .lunbo .lunbo_b ul li:hover {
+  border: 1px solid #f00;
+}
+
+#main .main .lunbo .lunbo_b ul li img {
+  width: 214px;
+  height: 270px;
+  display: block;
+  margin: 13px;
+  margin-bottom: 10px;
+}
+
+#main .main .lunbo .lunbo_b ul li p {
+  height: 36px;
+  overflow: hidden;
+  line-height: 18px;
+  padding: 0 21px;
+  margin-bottom: 5px;
+}
+
+#main .main .lunbo .lunbo_b ul li span {
+  color: #f52648;
+  font-size: 20px;
+}
+
+#main .main .lunbo .lunbo_b ul li del {
+  color: #999;
+}
+
+#main .main .lunbo .lunbo_b .leftSp {
+  position: absolute;
+  left: 0;
+  top: 35%;
+  z-index: 3;
+  display: none;
+  cursor: pointer;
+  background: url(../img/icons.png) no-repeat -136px -98px;
+  width: 26px;
+  height: 56px;
+}
+
+#main .main .lunbo .lunbo_b .rightSp {
+  position: absolute;
+  right: 0;
+  top: 35%;
+  z-index: 3;
+  display: none;
+  cursor: pointer;
+  background: url(../img/icons.png) no-repeat -162px -98px;
+  width: 26px;
+  height: 56px;
+}
