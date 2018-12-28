@@ -107,13 +107,14 @@
   border: 1px solid #ccc;
   border-top: 0;
   border-bottom: 1px solid #fff;
+  z-index: 20;
 }
 
 #loginbar .loginbar a.tellf div.tel_d {
   position: absolute;
   left: 0;
   top: 27px;
-  z-index: 1;
+  z-index: 10;
   display: none;
   background: #fff;
   width: 139px;
@@ -193,13 +194,14 @@
   border: 1px solid #ccc;
   border-top: 0;
   border-bottom: 1px solid #fff;
+  z-index: 20;
 }
 
 #loginbar .loginbar .loginbar-links .links_h {
   position: absolute;
   left: 0;
   top: 27px;
-  z-index: 1;
+  z-index: 10;
   display: none;
   width: 139px;
   height: 224px;
@@ -371,16 +373,17 @@
   color: #F52648;
 }
 
-#header .header .shopping-btn {
+#header .header .shopping .shopping-btn {
   float: right;
   position: relative;
+  z-index: 8;
   width: 136px;
   height: 40px;
   background: url(../img/icons.png) no-repeat 0 -112px;
   margin-top: 40px;
 }
 
-#header .header .shopping-btn strong {
+#header .header .shopping .shopping-btn strong {
   position: absolute;
   left: 102px;
   top: 10px;
@@ -388,6 +391,107 @@
   height: 20px;
   text-align: center;
   color: #fff;
+}
+
+#header .header .shopping .shopping-btn2 {
+  display: none;
+  float: right;
+  position: relative;
+  width: 300px;
+  height: 173px;
+  padding-top: 40px;
+}
+
+#header .header .shopping .shopping-btn2 .shopping-title {
+  position: relative;
+  height: 42px;
+  width: 300px;
+  background: url(../img/icons.png) no-repeat 0 -156px;
+}
+
+#header .header .shopping .shopping-btn2 .shopping-title strong {
+  position: absolute;
+  left: 268px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+#header .header .shopping .shopping-btn2 .shopping-content {
+  display: none;
+  position: relative;
+  z-index: 50;
+  width: 300px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-top: 0;
+}
+
+#header .header .shopping .shopping-btn2 .gwclist {
+  position: relative;
+  z-index: 50;
+  width: 300px;
+  padding: 12px 10px 10px 15px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-top: 0;
+}
+
+#header .header .shopping .shopping-btn2 .gwclist ul li {
+  padding: 10px 6px 12px;
+  font-size: 12px;
+  border-bottom: 1px dashed #ccc;
+}
+
+#header .header .shopping .shopping-btn2 .gwclist ul li img {
+  float: left;
+  width: 53px;
+  height: 68px;
+  margin-right: 9px;
+}
+
+#header .header .shopping .shopping-btn2 .gwclist ul li p {
+  float: left;
+  width: 109px;
+  height: 68px;
+  font-size: 12px;
+  color: #666666;
+}
+
+#header .header .shopping .shopping-btn2 .gwclist ul li span {
+  float: right;
+}
+
+#header .header .shopping .shopping-btn2 .gwclist .gwc_b {
+  padding-top: 13px;
+}
+
+#header .header .shopping .shopping-btn2 .gwclist .gwc_b .gwc_b_l {
+  width: 170px;
+  height: 36px;
+}
+
+#header .header .shopping .shopping-btn2 .gwclist .gwc_b .gwc_b_l p {
+  font-size: 12px;
+  color: #666666;
+}
+
+#header .header .shopping .shopping-btn2 .gwclist .gwc_b .gwc_b_r {
+  padding-top: 6px;
+}
+
+#header .header .shopping .shopping-btn2 .gwclist .gwc_b .gwc_b_r a {
+  display: block;
+  width: 100px;
+  height: 30px;
+  background: #f00;
+  color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 12px;
 }
 
 /*nav*/
@@ -550,14 +654,19 @@
 
 #nav .nav .classify .nav1 .yinc {
   height: 0;
+  background: #F7F7F7;
   overflow: hidden;
 }
 
 #nav .nav .classify .nav1:hover .yinc {
   height: 110px;
-  background: #fff;
   overflow: visible;
+  background: #F7F7F7;
   transition: all .2s;
+}
+
+#nav .nav .classify .nav1 .yinc:hover {
+  background: #fff;
 }
 
 #nav .nav .classify .nav1 .more {
@@ -793,6 +902,7 @@
   float: left;
   width: 490px;
   margin: 0 4px 20px;
+  cursor: pointer;
 }
 
 #main .main .content ul li img {
@@ -837,6 +947,7 @@
 
 #main .main .list ul li {
   float: left;
+  position: relative;
   padding: 0 14px;
   border: 1px solid #ccc;
   margin: 0 10px 28px;
@@ -1057,4 +1168,75 @@
   width: 104px;
   background: url(../img/icons3.png) no-repeat -194px -315px;
   height: 37px;
+}
+
+/*tc*/
+.tc {
+  position: fixed;
+  width: 530px;
+  height: 240px;
+  left: 50%;
+  top: 50%;
+  margin: -120px 0 0 -265px;
+  padding-top: 70px;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.tc p {
+  text-align: center;
+}
+
+.tc p:nth-child(1) {
+  font-size: 22px;
+  line-height: 22px;
+  margin-bottom: 20px;
+}
+
+.tc p:nth-child(1) span {
+  display: inline-block;
+  width: 24px;
+  height: 22px;
+  background: url(../img/tc.png) no-repeat;
+  vertical-align: middle;
+  margin-right: 14px;
+}
+
+.tc p:nth-child(2) {
+  font-size: 12px;
+  color: #999999;
+  margin-bottom: 17px;
+}
+
+.tc p:nth-child(2) span {
+  color: #000;
+}
+
+.tc p:nth-child(3) {
+  height: 40px;
+}
+
+.tc p:nth-child(3) a {
+  display: inline-block;
+  width: 110px;
+  height: 40px;
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  line-height: 40px;
+  background: #E62449;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.tc p:nth-child(3) span {
+  font-size: 12px;
+  color: #CA8516;
+}
+
+.tc .btn {
+  position: absolute;
+  right: 13px;
+  top: 13px;
 }

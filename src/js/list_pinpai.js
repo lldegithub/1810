@@ -1,6 +1,6 @@
 define(["jq","data"],function(jq,data){
     let itemArr = data;
-    console.log(itemArr);
+    // console.log(itemArr);
     // 点击更多打开,收起
     let $more = $(".more");
     let $strong = $(".more strong");
@@ -315,7 +315,8 @@ define(["jq","data"],function(jq,data){
                     let guid = $(this).attr("guid");
                     location.href = "../html/details.html?id="+guid;
                 });
-            }
+            },
+            async : false
         });
     }
 
@@ -342,7 +343,7 @@ define(["jq","data"],function(jq,data){
                     <del style="color:#ccc;">
                         ￥${item.oldprice}
                     </del><br>
-                    <button>
+                    <button class="cartBtn">
                         加入购物车
                     </button>
                     <div class="tips">

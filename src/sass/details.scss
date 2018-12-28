@@ -228,6 +228,7 @@
             color: #fff;
             border-radius: 5px;
             margin-bottom: 10px;
+            cursor:pointer;
           }
         }
       }
@@ -427,5 +428,67 @@
         }
       }
     }
+  }
+}
+
+/*tc*/
+.tc{
+  position:fixed;
+  width:530px;
+  height:240px;
+  left:50%;
+  top:50%;
+  margin:-120px 0 0 -265px;
+  padding-top:70px;
+  background:#fff;
+  border-radius:10px;
+  p{
+    text-align:center;
+    &:nth-child(1){
+      font-size:22px;
+      line-height:22px;
+      margin-bottom:20px;
+      span{
+        display:inline-block;
+        width:24px;
+        height:22px;
+        background:url(../img/tc.png) no-repeat;
+        vertical-align:middle;
+        margin-right:14px;
+      }
+    }
+    &:nth-child(2){
+      font-size:12px;
+      color:#999999;
+      margin-bottom:17px;
+      span{
+        color:#000;
+      }
+    }
+    &:nth-child(3){
+      height:40px;
+      a{
+        display:inline-block;
+        width:110px;
+        height:40px;
+        font-size:18px;
+        color:#fff;
+        font-weight:bold;
+        text-align:center;
+        line-height:40px;
+        background:#E62449;
+        border-radius:5px;
+        margin-right:20px;
+      }
+      span{
+        font-size:12px;
+        color:#CA8516;
+      }
+    }
+  }
+  .btn{
+    position:absolute;
+    right:13px;
+    top:13px;
   }
 }

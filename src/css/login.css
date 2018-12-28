@@ -1,0 +1,385 @@
+#header {
+  background: #F2F2F2;
+}
+
+#header .header {
+  line-height: 30px;
+}
+
+#header .header a.tellf {
+  float: right;
+  position: relative;
+  width: 93px;
+  height: 28px;
+}
+
+#header .header a.tellf span.tel_sp {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 93px;
+  height: 28px;
+  color: #F52648;
+  font-size: 12px;
+  line-height: 28px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#header .header a.tellf span.tel_sp i {
+  display: inline-block;
+  width: 9px;
+  height: 14px;
+  background: url(../img/icons2.png) no-repeat -541px -257px;
+}
+
+#header .header a.tellf span.tel_change {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-top: 0;
+  border-bottom: 1px solid #fff;
+}
+
+#header .header a.tellf div.tel_d {
+  position: absolute;
+  left: 0;
+  top: 27px;
+  z-index: 1;
+  display: none;
+  background: #fff;
+  width: 139px;
+  height: 172px;
+  border: 1px solid #ccc;
+  padding: 19px 0 10px 13px;
+}
+
+#header .header a.tellf div.tel_d img {
+  width: 112px;
+  height: 112px;
+  margin-bottom: 10px;
+}
+
+#header .header a.tellf div.tel_d .i1 {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  background: url(../img/icons2.png) no-repeat -536px -284px;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+#header .header a.tellf div.tel_d .i2 {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  background: url(../img/icons2.png) no-repeat -536px -316px;
+  vertical-align: middle;
+}
+
+#header .header a.tellf div.tel_d span {
+  font-size: 12px;
+  color: #000;
+  vertical-align: middle;
+}
+
+#header .header span.loginbar-save {
+  float: right;
+  font-size: 12px;
+  line-height: 28px;
+  color: #515151;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+#header .header .loginbar-links {
+  float: right;
+  width: 77px;
+  height: 28px;
+  position: relative;
+}
+
+#header .header .loginbar-links a {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 77px;
+  height: 28px;
+  font-size: 12px;
+  color: #515151;
+  line-height: 28px;
+  text-align: center;
+}
+
+#header .header .loginbar-links a i {
+  display: inline-block;
+  width: 8px;
+  height: 4px;
+  margin-bottom: 2px;
+  background: url(../img/icons.png) no-repeat -96px 0px;
+}
+
+#header .header .loginbar-links a.change {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-top: 0;
+  border-bottom: 1px solid #fff;
+}
+
+#header .header .loginbar-links .links_h {
+  position: absolute;
+  left: 0;
+  top: 27px;
+  z-index: 1;
+  display: none;
+  width: 139px;
+  height: 224px;
+  background: #fff;
+  font-size: 12px;
+  padding-left: 13px;
+  border: 1px solid #ccc;
+}
+
+#header .header .loginbar-links .links_h ul {
+  overflow: hidden;
+}
+
+#header .header .loginbar-links .links_h ul li {
+  float: left;
+  line-height: 29px;
+  margin-right: 20px;
+}
+
+#header .header .loginbar-links .links_h ul li:nth-child(2) {
+  margin-right: 0;
+}
+
+#header .header .loginbar-links .links_h img {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+#header .header .loginbar-links .links_h span {
+  display: block;
+  text-align: center;
+  color: #f00;
+}
+
+#header .header .home {
+  float: right;
+  color: #666666;
+  font-size: 12px;
+}
+
+#main {
+  background: #FBE1D4;
+}
+
+#main .main {
+  background: url(../img/login.jpg) no-repeat center top;
+  padding: 10px 20px 0px 10px;
+}
+
+#main .main h1 a {
+  display: block;
+  width: 170px;
+  height: 90px;
+  text-indent: -9999em;
+  margin-bottom: 20px;
+  background: url(../img/logo.png) no-repeat;
+}
+
+#main .main .login {
+  margin-left: 540px;
+  width: 420px;
+  padding: 0 60px 20px;
+  background: #fff;
+  border-radius: 5px;
+}
+
+#main .main .login .login_t {
+  line-height: 77px;
+  margin-bottom: 29px;
+}
+
+#main .main .login .login_t strong {
+  float: left;
+  font-size: 22px;
+}
+
+#main .main .login .login_t span {
+  float: right;
+  font-size: 12px;
+}
+
+#main .main .login .login_c div {
+  height: 85px;
+  width: 300px;
+  font-size: 12px;
+}
+
+#main .main .login .login_c div.username input {
+  height: 35px;
+  width: 300px;
+  border: 1px solid #ccc;
+}
+
+#main .main .login .login_c div.yzm p {
+  width: 300px;
+  height: 35px;
+}
+
+#main .main .login .login_c div.yzm p input {
+  float: left;
+  width: 147px;
+  height: 35px;
+  border: 1px solid #ccc;
+  margin-right: 7px;
+}
+
+#main .main .login .login_c div.yzm p i {
+  float: left;
+  width: 85px;
+  height: 35px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 7px;
+}
+
+#main .main .login .login_c div.yzm p span {
+  cursor: pointer;
+  color: #A0A0A0;
+  text-decoration: underline;
+}
+
+#main .main .login .login_c div.duanxin p {
+  width: 300px;
+  height: 35px;
+}
+
+#main .main .login .login_c div.duanxin p input {
+  float: left;
+  width: 147px;
+  height: 35px;
+  border: 1px solid #ccc;
+  margin-right: 7px;
+}
+
+#main .main .login .login_c div.duanxin p span {
+  float: right;
+  width: 134px;
+  height: 35px;
+  border: 1px solid #FF7C91;
+  background: #FFAEBB;
+  color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 35px;
+}
+
+#main .main .login .login_c div.password input {
+  height: 35px;
+  width: 300px;
+  border: 1px solid #ccc;
+}
+
+#main .main .login .login_c div.password p {
+  visibility: hidden;
+}
+
+#main .main .login .login_c div.password p b {
+  display: inline-block;
+  vertical-align: middle;
+  width: 70px;
+  text-align: center;
+  font-weight: normal;
+  line-height: 12px;
+  line-height: 16px\9;
+  margin: 1px 1px 0 2px;
+  padding: 1px 0 0 0;
+  height: 15px;
+  color: #fff;
+  background: #ff0206;
+  margin-left: 5px;
+  opacity: 0.1;
+}
+
+#main .main .login .login_c div.qr input {
+  height: 35px;
+  width: 300px;
+  border: 1px solid #ccc;
+}
+
+#main .main .login .login_c button {
+  width: 300px;
+  height: 40px;
+  background: #E51A37;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+#main .main .login .login_c a {
+  font-size: 12px;
+  color: #999;
+}
+
+/*footer*/
+#footer .footer {
+  font-size: 12px;
+  line-height: 22px;
+  text-align: center;
+  overflow: hidden;
+  color: #999;
+}
+
+#footer .footer .footer_t {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#footer .footer .footer_t a {
+  padding: 0 20px 0 0;
+  padding-right: 70px !important;
+  color: #000;
+  display: inline-block;
+}
+
+#footer .footer .footer_b a {
+  margin-right: 20px;
+  display: inline-block;
+  width: 110px;
+  height: 40px;
+  overflow: hidden;
+  padding: 0 !important;
+  line-height: 321px;
+}
+
+#footer .footer .footer_b a:nth-child(1) {
+  height: 36px;
+  background: url(../img/footer_tu2.jpg) no-repeat;
+}
+
+#footer .footer .footer_b a:nth-child(2) {
+  height: 36px;
+  background: url(../img/footer_tu3.jpg) no-repeat;
+}
+
+#footer .footer .footer_b a:nth-child(3) {
+  height: 36px;
+  background: url(../img/footer_tu4.jpg) no-repeat;
+}
+
+#footer .footer .footer_b a:nth-child(4) {
+  height: 37px;
+  background: url(../img/icons3.png) no-repeat -194px -277px;
+}
+
+#footer .footer .footer_b a:nth-child(5) {
+  width: 104px;
+  background: url(../img/icons3.png) no-repeat -194px -315px;
+  height: 37px;
+}

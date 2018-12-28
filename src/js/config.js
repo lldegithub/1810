@@ -12,6 +12,7 @@ require.config({
         "tab" : "details_tab",
         "xiding" : "details_xiding",
         "dlrendar" : "details_rendar",
-        "idpinpai" : "index_pinpai"
+        "idpinpai" : "index_pinpai",
+        "yz" : "login_yz"
     }
 });

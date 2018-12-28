@@ -60,40 +60,96 @@ define(["jq"],function(jq){
         $mydiv.css("display","none");
     });
     // 登录和注册位置的渲染
-    $wel = $(".loginbar-wel");
+    let $wel = $(".loginbar-wel");
     // 判断有没有cookie
     let cookie = document.cookie;
-    let user;
-    if(cookie = ""){
+    // console.log(cookie);
+    let user = "";
+    if(!cookie){
         user = "";
     }else{
         let cookieArr = cookie.split("; ");
         for(let i = 0;i < cookieArr.length;i++){
             let arr = cookieArr[i].split("=");
-            if(arr[0] == "username"){
+            if(arr[0] == "uname"){
                 user = arr[1];
+                user = user.slice(0,4) + "****" + user.slice(8);
                 break;
             }
         }
-        user = "";
     }
+    loginRendar(user);
     // 有cookie说明登录了,用登录名渲染页面
-    if(user){
-        $wel.html(`嗡，欢迎来乐蜂，&nbsp;
+
+    // 点击退出按钮删除cookie,退到登录页面
+    let $quit = $(".quit");
+    $quit.on("click",function(){
+        let d = new Date();
+        d = d.setDate(d.getDate() -1);
+        Cookie.delCookie("uname","/");
+         location.href = "../html/reg.html";
+         return false;
+    });
+    // console.log($quit);
+
+    // 封装cookie的设置、获取、删除
+    var Cookie = {
+        setCookie : function(name,val,date,path){
+            var str = name+"="+val;
+            if(date){
+                str += "; expires="+date.toUTCString();
+            }
+            if(path){
+                str += "; path="+path;
+            }
+            document.cookie = str;
+        },
+        // 获取cookie
+        getCookie : function(name){
+            var cookie = document.cookie;//"left=300; age=17"
+            if(cookie == ""){
+                return "";
+            }else{
+                var cookieArr = cookie.split("; ");
+                for(var i=0;i<cookieArr.length;i++){
+                    var arr = cookieArr[i].split("=");
+                    if(arr[0] == name){
+                        return arr[1];
+                    }
+                }
+                return "";
+            }
+        },
+        // 删除某条cookie
+        delCookie : function(name,path){
+            var d = new Date();
+            d.setDate(d.getDate()-1);
+            Cookie.setCookie(name,"",d,path);
+        }
+    }
+
+
+    function loginRendar(user){
+        if(user){
+            $wel.html(`嗡，欢迎来乐蜂，&nbsp;
             <a href="#" class="login">
             ${user}&nbsp;&nbsp;&nbsp;
             </a>
-            <a href="#" class="login">
+            <a href="../html/reg.html" class="login quit">
             &nbsp;&nbsp;退出登录&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </a>`);
-    }else{
-        // 没有cookie说明没有登录
-        $wel.html(`欢迎来到乐蜂，请&nbsp;
-                <a href="#" class="login">
+        }else{
+            // 没有cookie说明没有登录
+            $wel.html(`欢迎来到乐蜂，请&nbsp;
+                <a href="../html/reg.html" class="login">
                     登录&nbsp;&nbsp;&nbsp;
                 </a>
-                <a href="#" class="login">
+                <a href="../html/login.html" class="login">
                     &nbsp;&nbsp;免费注册&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </a>`);
+        }
     }
+
+
+
 });

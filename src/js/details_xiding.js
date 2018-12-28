@@ -4,11 +4,11 @@ define(["jq"],function(jq){
         let $zheli = $(".zheli");
         let $span = $(".xiangqing_t div span");
         let $height1 = $xiangqing.offset().top;
-        console.log($height1);
+        // console.log($height1);
         let $left = $xiangqing.offset().left;
         let $width = $xiangqing.outerWidth();
         let $height2 = $zheli.offset().top;
-        console.log($height1,$height2);
+        // console.log($height1,$height2);
         $span.on("click",function(){
             $span.removeClass("cur");
             $(this).addClass("cur");

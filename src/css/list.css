@@ -245,6 +245,7 @@
   height: 41px;
   text-align: center;
   line-height: 38px;
+  cursor: pointer;
 }
 
 #main .main .paixu .paixu_l li i {
@@ -577,4 +578,75 @@
   background: url(../img/icons.png) no-repeat -162px -98px;
   width: 26px;
   height: 56px;
+}
+
+/*tc*/
+.tc {
+  position: fixed;
+  width: 530px;
+  height: 240px;
+  left: 50%;
+  top: 50%;
+  margin: -120px 0 0 -265px;
+  padding-top: 70px;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.tc p {
+  text-align: center;
+}
+
+.tc p:nth-child(1) {
+  font-size: 22px;
+  line-height: 22px;
+  margin-bottom: 20px;
+}
+
+.tc p:nth-child(1) span {
+  display: inline-block;
+  width: 24px;
+  height: 22px;
+  background: url(../img/tc.png) no-repeat;
+  vertical-align: middle;
+  margin-right: 14px;
+}
+
+.tc p:nth-child(2) {
+  font-size: 12px;
+  color: #999999;
+  margin-bottom: 17px;
+}
+
+.tc p:nth-child(2) span {
+  color: #000;
+}
+
+.tc p:nth-child(3) {
+  height: 40px;
+}
+
+.tc p:nth-child(3) a {
+  display: inline-block;
+  width: 110px;
+  height: 40px;
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  line-height: 40px;
+  background: #E62449;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.tc p:nth-child(3) span {
+  font-size: 12px;
+  color: #CA8516;
+}
+
+.tc .btn {
+  position: absolute;
+  right: 13px;
+  top: 13px;
 }

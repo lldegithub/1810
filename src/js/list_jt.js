@@ -1,7 +1,7 @@
 define(["jq","data"],function(jq,data){
     // 控制商品分类那里的那个箭头转
     let $classify = $(".classify");
-    console.log($classify);
+    // console.log($classify);
     let $i = $classify.children(".classify_i");
     $classify.on("mouseenter",function(){
         $i.css({"transform":"rotate(180deg)","transition":"all .3s"});
