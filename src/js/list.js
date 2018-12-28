@@ -247,7 +247,7 @@ require(["config"],function(){
             let totalPrice = 0;
             if(cartArr){
                 for(let i = 0;i < cartArr.length;i++){
-                    num += cartArr[i].qty;
+                    num += parseInt(cartArr[i].qty);
                     totalPrice += cartArr[i].qty * itemArr[cartArr[i].id-1].newprice;
                 }
             }
@@ -274,7 +274,6 @@ require(["config"],function(){
             $p3sp.on("click",function(){
                 $tc.remove();
             });
-
         }
 
         function pRendar(num,totalPrice){

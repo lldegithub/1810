@@ -388,7 +388,7 @@ require(["config"],function(){
                     totalPrice += cartArr[i].qty * itemArr[cartArr[i].id-1].newprice;
                 }
             }
-            // console.log(num,totalPrice);
+            console.log(num,totalPrice);
             let $tc = $("<div>");
             let $p1 = $("<p>");
             let $span = $("<span>");
