@@ -66,8 +66,6 @@ require(["config"],function(){
         let $zhutu = $(".zhutu");
         let $small = $(".small");
         let $big = $(".big");
-        console.log(66);
-        console.log($zhutu);
         // 放大镜
         $zhutu.on("mouseover",function(){
             $small.css("display","block");
