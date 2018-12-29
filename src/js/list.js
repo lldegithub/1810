@@ -34,7 +34,7 @@ require(["config"],function(){
                 d.setDate(d.getDate()-1);
                 Cookie.setCookie(name,"",d,path);
             }
-        }
+        };
         let itemArr = c;
         // 点击加入购物车
         let $cartBtn = $("button.cartBtn");

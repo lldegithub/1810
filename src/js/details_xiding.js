@@ -1,5 +1,5 @@
 define(["jq"],function(jq){
-    window.onload = function(){
+    // window.onload = function(){
         let $xiangqing = $(".xiangqing_t");
         let $zheli = $(".zheli");
         let $span = $(".xiangqing_t div span");
@@ -25,7 +25,7 @@ define(["jq"],function(jq){
                 $xiangqing.removeClass("fixed");
             }
         })
-    };
+
 
 
     // $(window).on("load",function(){

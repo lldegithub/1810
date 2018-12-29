@@ -175,57 +175,52 @@ define(["jq","data"],function(jq,data){
     let ppArr = [];
     let jgArr = [];
     let zkArr = [];
-    let ppStr = "";
-    let jgStr = "";
-    let zkStr = "";
-    $filter_ul.on("click","ul li",function(){
-        ppArr = [];
-        let $pp = $(".pp");
-        let $jg = $(".jg");
-        let $zk = $(".zk");
-        // console.log($pp,$jg,$zk);
-        for(let i = 0;i < $pp.length;i++){
-            let item = $pp[i];
-            item = item.innerText.slice(0,-1)
-            if(ppArr.indexOf(item) == -1){
-                ppArr.push(item);
-            }
-        }
-        if(ppArr){
-            ppStr = JSON.stringify(ppArr);
-        }else{
-            ppStr = "";
-        }
-        if($jg.length > 0){
-            jgArr = $jg.text().split("-");
-            for(let i = 0;i < jgArr.length;i++){
-                if(jgArr.length == 1){
-                    jgArr = [300,10000];
+    fltdianji();
+    function fltdianji(){
+        $filter_ul.on("click","ul li",function(e){
+            ppArr = [];
+            let $pp = $(".pp");
+            let $jg = $(".jg");
+            let $zk = $(".zk");
+            // console.log($pp,$jg,$zk);
+            for(let i = 0;i < $pp.length;i++){
+                let item = $pp[i];
+                item = item.innerText.slice(0,-1);
+                if(ppArr.indexOf(item) == -1){
+                    ppArr.push(item);
                 }
-                jgArr[i] = parseInt(jgArr[i]);
             }
-            jgStr = JSON.stringify(jgArr);
-        }else{
-            jgArr = [];
-            jgStr = "";
-        }
-        if($zk.length > 0){
-            zkArr = $zk.text().split("-");
-            for(let i = 0;i < zkArr.length;i++){
-                if(zkArr.length == 1){
-                    zkArr = [9,10]
+
+            if($jg.length > 0){
+                jgArr = $jg.text().split("-");
+                for(let i = 0;i < jgArr.length;i++){
+                    if(jgArr.length == 1){
+                        jgArr = [300,10000];
+                    }
+                    jgArr[i] = parseInt(jgArr[i]);
                 }
-                zkArr[i] = parseInt(zkArr[i]);
+            }else{
+                jgArr = [];
             }
-            zkStr = JSON.stringify(zkArr);
-        }else{
-            zkArr = [];
-            zkStr = "";
-        }
-        console.log(ppArr,jgArr,zkArr);
-        console.log(ppStr,jgStr,zkStr);
-        shuju();
-    });
+            if($zk.length > 0){
+                zkArr = $zk.text().split("-");
+                for(let i = 0;i < zkArr.length;i++){
+                    if(zkArr.length == 1){
+                        zkArr = [9,10]
+                    }
+                    zkArr[i] = parseInt(zkArr[i]);
+                }
+            }else{
+                zkArr = [];
+            }
+            // console.log(ppArr,jgArr,zkArr);
+            let cloneArr = [];
+            for(let i = 0;i < itemArr.length;i++){
+                cloneArr.push(itemArr[i]);
+            }
+            shuju(cloneArr);
+        });
+    }
 
 
     // 排序方式
@@ -300,14 +295,55 @@ define(["jq","data"],function(jq,data){
     });
     // 获取数据
 
-    function shuju(){
+    function shuju(arr){
         $.ajax({
             type:"get",
-            url:"../api/list.php?qty=8&currentPage="+pageIdx+"&paixu="+paixu+
-            "&ppStr="+ppStr+"&jgStr="+jgStr+"&zkStr="+zkStr,
+            url:"../api/list.php?qty=8&currentPage="+pageIdx+"&paixu="+paixu,
             success : function(res){
                 res = JSON.parse(res);
+                let cartArr = arr;
+                console.log(cartArr);
+                if(ppArr.length > 0){
+                    for(let i = cartArr.length - 1;i >= 0;i--){
+                        let item = cartArr[i];
+                        for(j=0;j<ppArr.length;j++){
+                            if(ppArr[j] == item.pp){
+                                // cartArr.push(item);
+                            }else{
+                                cartArr.splice(i,1);
+                            }
+                        }
+                    }
+                }
+                if(jgArr.length > 0){
+                    console.log(jgArr);
+                    for(let i = cartArr.length - 1;i >= 0;i--){
+                        let item = cartArr[i];
+                        if(item.newprice > jgArr[0] && item.newprice < jgArr[1]){
+                            // cartArr = [item];
+                            // console.log(item);
+                        }else{
+                            // console.log(item.newprice);
+                            cartArr.splice(i,1);
+                        }
+                    }
+                }
+                if(zkArr.length > 0){
+                    for(let i = cartArr.length - 1;i >= 0;i--){
+                        let item = cartArr[i];
+                        item.zhe = (item.newprice / item.oldprice)*10;
+                        if(item.zhe > zkArr[0] && item.zhe < zkArr[1]){
+                            // cartArr.push(item);
+                        }else{
+                            cartArr.splice(i,1);
+                        }
+                    }
+                }
+                console.log(cartArr);
                 listRendar(res.data);
+                // if(jgArr.length>0 || ppArr.length>0 || zkArr.length>0){
+                //     listRendar(cartArr);
+                // }
                 // console.log(res);
                 let $lilist = $(".lilist");
                 // console.log($lilist);
