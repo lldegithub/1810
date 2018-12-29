@@ -1,5 +1,5 @@
 require(["config"],function(){
-    require(["jq","loginbar","data","totop","fdj","tab","xiding","dlrendar"],function(a,b,c){
+    require(["jq","loginbar","data","totop","tab","xiding","dlrendar"],function(a,b,c){
         // 控制商品分类那里的那个箭头转
         let $classify = $(".classify");
         // console.log($classify);
@@ -44,7 +44,7 @@ require(["config"],function(){
                 d.setDate(d.getDate()-1);
                 Cookie.setCookie(name,"",d,path);
             }
-        }
+        };
 
         // 渲染页面
         let itemArr = c;
@@ -63,6 +63,45 @@ require(["config"],function(){
         // 主图部分渲染
         let $main_tu = $(".main_tu");
         zhutu(goods);
+        let $zhutu = $(".zhutu");
+        let $small = $(".small");
+        let $big = $(".big");
+        console.log(66);
+        console.log($zhutu);
+        // 放大镜
+        $zhutu.on("mouseover",function(){
+            $small.css("display","block");
+            $big.css("display","block");
+            console.log(666);
+            $zhutu.on("mousemove",function(e){
+                // console.log(e.clientX);
+                let fuox = $zhutu.offset().left;
+                let fuoy = $zhutu.offset().top;
+                let ox = $small.outerWidth()/2;
+                let oy = $small.outerHeight()/2;
+                let left = e.pageX - ox - fuox;
+                let top = e.pageY - oy - fuoy;
+                if(left < 0){
+                    left = 0;
+                }else if(left > $zhutu.outerWidth() - $small.outerWidth()){
+                    left = $zhutu.outerWidth() - $small.outerWidth();
+                }
+                if(top < 0){
+                    top = 0;
+                }else if(top > $zhutu.outerHeight() - $small.outerHeight()){
+                    top = $zhutu.outerHeight() - $small.outerHeight();
+                }
+                $small.css("left",left);
+                $small.css("top",top);
+                // console.log($small.position(),fuoy);
+                $big.children("img").css({"left":-left * 3,"top":-top*3});
+            })
+        }).on("mouseout",function(){
+            $small.css("display","none");
+            $big.css("display","none");
+        });
+
+        // 主图部分的渲染函数
         function zhutu(obj){
             let str = "";
             str += ` <div class="tu_l fl">

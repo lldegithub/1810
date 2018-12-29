@@ -19,7 +19,7 @@ define(["jq"],function(jq){
             }
         });
         $(window).on("scroll",function(){
-            if($(document).scrollTop() >= $height1){
+            if($(document).scrollTop() >= 791){
                 $xiangqing.addClass("fixed").css({"left":$left,"width":$width});
             }else{
                 $xiangqing.removeClass("fixed");
